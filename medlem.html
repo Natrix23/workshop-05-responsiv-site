@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bli Medlem</title>
+</head>
+<body>
+  <header>
+    <h1 class="title">Bli Medlem</h1>
+    <button class="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="#">Katter</a>
+      <a href="#">Om oss</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="section">
+        <h2>Medlemskap</h2>
+        <form action="https://httpbin.org/anything" method="POST" class="member-form">
+          <label for="fornamn">Förnamn:</label>
+          <input type="text" id="fornamn" name="fornamn" required>
+
+          <label for="efternamn">Efternamn:</label>
+          <input type="text" id="efternamn" name="efternamn" required>
+
+          <label for="anvandarnamn">Användarnamn:</label>
+          <input type="text" id="anvandarnamn" name="anvandarnamn" required>
+
+          <label for="losenord">Lösenord:</label>
+          <input type="password" id="losenord" name="losenord" required>
+
+          <label for="email">E-post:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="kattras">Favorit-kattras:</label>
+          <select id="kattras" name="kattras" required>
+            <option value="">Välj en kattras</option>
+            <option value="Siamese">Siames</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Persian">Perser</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Bengal">Bengal</option>
+          </select>
+
+          <label>
+            <input type="checkbox" id="godkanner" name="godkanner" required> Jag godkänner villkoren
+          </label>
+
+          <button type="submit" class="button">Skicka Formulär</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>&copy; 2023 Kattsidan</footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
